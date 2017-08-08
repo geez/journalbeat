@@ -12,6 +12,7 @@ name: journalbeat
 
 output.logstash:
   enabled: true
-  hosts: ["${LOGSTASH_HOST}"]
+  hosts: ["${LOGSTASH_HOST}", "${LOGSTASH_HOST}"]
+  loadbalance: true
 
 logging.to_files: false
